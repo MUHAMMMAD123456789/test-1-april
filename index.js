@@ -91,7 +91,7 @@ function setup() {
         totalSale = total - sale
 
 
-        newPrice = item.price - sale;
+        newPrice = (item.price - sale).toFixed(2);
         arr_sale.push({name: item.name, price: newPrice});
         
     
