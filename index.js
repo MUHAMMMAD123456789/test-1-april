@@ -12,6 +12,8 @@ let min = 0
 
 let average = 0
 
+let newPrice = 0
+
 let arr = [
 
 {
@@ -88,8 +90,14 @@ function setup() {
         sale = ( total / 100  ) * discount
         totalSale = total - sale
 
+
+        newPrice = item.price - sale;
+        arr_sale.push({name: item.name, price: newPrice});
+        
+    
         
     }
+    
 
 
 console.log(`Left after sale ${totalSale.toFixed(1)}`);
@@ -97,6 +105,6 @@ console.log(`Average ${average.toFixed(1)}`);
 console.log(min);
 console.log(max);
 console.log(total);
-
+console.log(arr_sale);
 }
 setup()
